@@ -1,0 +1,58 @@
+
+{% extends 'adminbase.html' %}
+{% block content %}
+
+
+<font size="+1" color="#26ce13">&nbsp;<strong>{{msg}}</strong></font>
+
+<table id="" width="100%">
+<tr><td>
+	<table id="tab" width="100%">
+	<tr>	<th>Training with Algorithms<br>
+<tr>
+		<td>Upload Training File<input type="file" class="form-control" name="file" required accept=".csv" >
+		<TR><td><form method="get" action="/svm/">
+		<input type="submit" value="SVM Classifier" class="form-control"></td>	</form>
+		<TR><td> <form method="get" action="/nb/">
+		<input type="submit" value="Naive Bayes Classifier" class="form-control"></td>	</form>
+		<TR><td><form method="get" action="/knn/"> 
+		<input type="submit" value="KNeighbors Classifier" class="form-control"></td>	</form>
+		<TR><td><form method="get" action="/nn/">
+		<input type="submit" value="Airtificial Nueral Network" class="form-control"></td>	</form>
+		<TR><td><form method="get" action="/rf/">
+		<input type="submit" value="Random Forest Classifier" class="form-control"></td></form>
+		</tr>
+		</table>
+	</form>
+	<td>
+	<table id="tab" width="100%">
+	<tr><th>Testing Algorithms with Test dataset
+	<tr>	<td>Upload Testing File:
+		<input type="file" class="form-control" name="file" required accept=".csv">
+	<TR><td><form method="get" action="/svmtesting/">
+	<input type="submit" value="SVM" class="form-control"></td>	</form>
+	<TR><td><form method="get" action="/nbtesting/">
+	<input type="submit" value="Naive Bayes Classifier" class="form-control"></td>	</form>
+	<TR><td><form method="get" action="/knntesting/">
+	<input type="submit" value="KNeighbors Classifier" class="form-control"></td>	</form>
+<TR><td><form method="get" action="/nntesting/">
+	<input type="submit" value="Airtificial Nueral Network" class="form-control"></td></form>
+	<TR><td><form method="get" action="/rftesting/">
+	<input type="submit" value="Random Forest Classifier" class="form-control"></td>
+	</form>
+	</tr>
+	</table>
+</form>
+
+</tr>
+</table><br>
+<center>
+<table id="tab"  width="50%">
+<tr>
+	<th><form method="post" action="/viewaccuracy/">{% csrf_token %}
+		<input type="submit" class="form-control" value="View	Accuracies">
+	</form></td>
+</tr>
+</table>
+	{% endblock %}
+

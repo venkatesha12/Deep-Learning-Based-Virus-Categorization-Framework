@@ -1,0 +1,22 @@
+
+{% extends 'adminbase.html' %}
+{% block content %}
+<h3>{{msg}}<h2>
+	View Acuuracies </h2><br><br>
+</h3> <center> 
+<table id="tab" width="30%">
+<tr>
+	<th width="10%">Sno<th><center>Algorithm<th><center>Accuracy
+
+			{% for d in data %}
+			<tr><td>{{forloop.counter}}<td><center>{{d.algo}}<td><center>{{d.accuracyv}}
+			</tr>
+				{% endfor %}
+</table>
+<br>
+<center>
+<a href="/viewgraph"><h1><i class="fa fa-bar-chart" aria-hidden="true"></i></h1></a>
+</center>
+	
+{% endblock %}
+

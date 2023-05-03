@@ -1,0 +1,25 @@
+
+{% extends 'adminbase.html' %}
+{% block content %}
+
+
+<font size="+1" color="#26ce13">&nbsp;<strong>{{msg}}</strong></font>
+<center>
+<table id="" width="60%">
+<tr><td>
+	<table id="tab" width="100%">
+	<tr>	<th>Training and Testing with CNN algorithm<br>
+<tr>
+		<TR><td><form method="get" action="/cnntrain/">
+		<input type="submit" value="Start Training" class="form-control"></td>	</form>
+		<TR><td> <form method="get" action="/cnnacc/">
+		<input type="submit" value="View Accuracy" class="form-control"></td>	</form>
+		</table>
+	</form>
+	
+
+</tr>
+</table><br>
+<center>
+	{% endblock %}
+

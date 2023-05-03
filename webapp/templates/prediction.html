@@ -1,0 +1,30 @@
+{% extends 'userbase.html' %}
+{% block content %}
+<font size="+1" color="red"><strong>{{msg}}</strong>
+</font>
+       <h3 class="title-style mb-4 pb-2"><font size="" color="#394471">Malware API Calls Detection</font></h3>
+
+<form method="post" action="/apidetection/">
+	{% csrf_token %} 
+<table width="60%" id="tab">
+          <tr><td><input type="file" class="form-control" name="file" required accept=".json,.py,.txt,.xml">
+
+					<tr><td><input type="submit" class="form-control" value="Detection"  size="40"  >
+                
+</table>
+</form>
+<br><hr><br><br>
+
+       <h3 class="title-style mb-4 pb-2"><font size="" color="#cc0000">Malware Type Detection in Binary Image</font></h3>
+
+<form method="post" action="/cnndetection/">
+	{% csrf_token %} 
+<table width="60%" id="tab">
+          <tr><td><input type="file" class="form-control" name="file" required accept="image/*">
+
+					<tr><td><input type="submit" class="form-control" value="Detection"  size="40"  >
+                
+</table>
+</form>
+
+{% endblock %}

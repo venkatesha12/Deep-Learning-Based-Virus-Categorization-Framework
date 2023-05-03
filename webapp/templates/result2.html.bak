@@ -1,0 +1,15 @@
+
+
+{% extends 'userbase.html' %}
+{% block content %}
+
+<h4><br><br>Predicted malware type result using CNN is :<h3><font size="" color="red"> {{ data }}</font>
+
+</h2>
+<a href="/detection">
+<h4><br>Back<br></h6></a>
+<br><br><br><br><br><br><br><br><br>
+
+
+{% endblock %}
+
